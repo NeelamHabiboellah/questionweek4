@@ -17,8 +17,7 @@ airline_data =  pd.read_csv('https://cf-courses-data.s3.us.cloud-object-storage.
 app = dash.Dash(__name__)
 
 # Build dash app layout
-app.layout = html.Div(children=[ 
-    html.H1('Flight Delay Time Statistics',
+app.layout = html.Div(children=[ html.H1('Flight Delay Time Statistics',
                     style={'textAlign': 'center', 'color': '#503D36',
                             'fontSize': 30}),
     html.Div(["Input Year: ", dcc.Input(id='input-year', value='2010',
@@ -28,14 +27,14 @@ app.layout = html.Div(children=[
                                 html.Br(),                                 
                                 # Segment 1
                                 html.Div([
-                                        html.Div(dcc.Graph(id='nas-plot')),
-                                        html.Div(dcc.Graph(id='security-plot'))
+                                        html.Div(dcc.Graph(id='carrier-plot')),
+                                        html.Div(dcc.Graph(id='weather-plot'))
                                 ], style={'display': 'flex'}),
 
                                 # Segment 2
                                 html.Div([
-                                        html.Div(),
-                                        html.Div()
+                                        html.Div(dcc.Graph(id='nas-plot')),
+                                        html.Div(dcc.Graph(id='security-plot))
                                 ], style={'display': 'flex'}),
                                 
                                 # Segment 3
