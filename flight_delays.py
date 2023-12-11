@@ -34,7 +34,7 @@ app.layout = html.Div(children=[ html.H1('Flight Delay Time Statistics',
                                 # Segment 2
                                 html.Div([
                                         html.Div(dcc.Graph(id='nas-plot')),
-                                        html.Div(dcc.Graph(id='security-plot))
+                                        html.Div(dcc.Graph(id='security-plot'))
                                 ], style={'display': 'flex'}),
                                 
                                 # Segment 3
